@@ -34,6 +34,10 @@ let invoices = [
 export function getInvoices() {
   return invoices;
 }
+
 export function getInvoice(number) {
-  return invoices.find((invoice) => invoice.number === number);
+  return invoices.find(
+    // find() 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환
+    (invoice) => invoice.number === number
+  );
 }
